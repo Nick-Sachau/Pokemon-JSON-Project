@@ -1,5 +1,5 @@
-# Pokemon-JSON-Project
+# Pokemon JSON Project
+## _Nick Sachau, Connor, Adrian_
 
 Added base files
-Fixed authors
-added Connor and Adrian to repo
+Added Connor and Adrian to repository
