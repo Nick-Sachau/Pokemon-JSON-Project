@@ -9,18 +9,62 @@
     <meta property="og:title" content="">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/charmander.css">
     <title>Charmander</title>
 </head>
 <body>
 
-    <header id="header"></header>
-    <section id="section"></section>
+    <main>
+        <header id="header"></header>
+        <section id="section"></section>
+    </main>
 
-    <header>
-        <h1>Pokédex</h1>
-    </header>
-
-    <section></section>
+    <main>
+        <header id="headerTest">
+            <h1>Pokédex</h1>
+        </header>
+    
+        <section id="sectionTest">
+            <div id="picture">
+                <img src="../charmander.png" width="100%" alt="">
+            </div>
+            <div id="stats">
+                <h2 id="name">Charmander</h2>
+                <h3>Base Stats</h3>
+                <div style="display: flex; flex-direction: row;">
+                    <ul>
+                        <li>Attack</li>
+                        <br>
+                        <li>Health</li>
+                        <br>
+                        <li>Defence</li>
+                        <br>
+                        <li>Speed</li>
+                        <br>
+                        <li>Exp</li>
+                    </ul>
+                    <div style=" width: 100%; display: flex; flex-direction: column; margin-right: 5%;">
+                        <div id="myProgress" style="margin: 11px 0; width: 100%; border-radius: 10px; height: 20px; background-color: white;">
+                            <div id="myBar" style="width: 70%; border-radius: 10px; height: 20px; background-color: orange;">70/100</div>
+                        </div>
+                        <div id="myProgress" style="margin: 11px 0; width: 100%; border-radius: 10px; height: 20px; background-color: white;">
+                            <div id="myBar" style="width: 70%; border-radius: 10px; height: 20px; background-color: red;">70/100</div>
+                        </div>
+                        <div id="myProgress" style="margin: 11px 0; width: 100%; border-radius: 10px; height: 20px; background-color: white;">
+                            <div id="myBar" style="width: 70%; border-radius: 10px; height: 20px; background-color: rgb(13, 175, 230);">70/100</div>
+                        </div>
+                        <div id="myProgress" style="margin: 11px 0; width: 100%; border-radius: 10px; height: 20px; background-color: white;">
+                            <div id="myBar" style="width: 70%; border-radius: 10px; height: 20px; background-color: rgb(148, 148, 148);">70/100</div>
+                        </div>
+                        <div id="myProgress" style="margin: 11px 0; width: 100%; border-radius: 10px; height: 20px; background-color: white;">
+                            <div id="myBar" style="width: 70%; border-radius: 10px; height: 20px; background-color: green;">70/100</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
 
     <script src="charmander.js"></script>
 

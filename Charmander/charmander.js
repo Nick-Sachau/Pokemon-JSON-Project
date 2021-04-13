@@ -16,6 +16,7 @@ function createHeader(obj) {
     let name = obj.name;
     let name2 = name.charAt(0).toUpperCase() + name.slice(1)
 
+    
     if(obj.is_default == true) {
         P.textContent = `${name2} is a default pokemon`;
 
@@ -24,6 +25,6 @@ function createHeader(obj) {
     H1_1.textContent = 'Pokédex';
     H1.textContent = name2;
 
-    header.appendChild(H1_1);
-    section.appendChild(P)
+    // header.appendChild(H1_1);
+    // section.appendChild(P)
 }
