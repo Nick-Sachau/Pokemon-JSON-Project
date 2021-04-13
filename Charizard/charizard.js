@@ -87,11 +87,11 @@ function init(string) {
 
 function createHeader(obj) {
   const H1 = document.createElement("h1");
-  H1.textContent = obj['name' ]
+  H1.textContent = "Pokedex";
 
-
+  header.appendChild(H1);
 }
 
 function createSection(obj) {
-
+  
 }

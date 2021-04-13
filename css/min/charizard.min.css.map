@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../Charizard/charizard.scss"
+    ],
+    "names": [],
+    "file": "charizard.min.css"
+}
