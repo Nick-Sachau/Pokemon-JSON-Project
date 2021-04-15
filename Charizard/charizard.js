@@ -93,5 +93,49 @@ function createHeader(obj) {
 }
 
 function createSection(obj) {
+  const { abilities, stats: statistics, types, ...restOfObject } = charizard;
+
+  let statsArray = ['Attack', 'HP', 'Defense', 'Speed', 'Special Attack', 'Special Defense', 'EXP']
+
+  let UL = document.createElement("ul");
+  let STATS = document.createElement("div");
+
+  STATS.setAttribute("id", "stats");
+
+  let statNames = document.createElement("div");
+  statNames.setAttribute("id", "statNames");
+
+  for (i in statsArray) {
+    let li = document.createElement("li");
+    li.textContent = statsArray[i];
+    let br = document.createElement("br");
+    UL.appendChild(br);
+    UL.appendChild(li);
+  }
+
+  statNames.appendChild(UL);
+  STATS.appendChild(statNames);
+
+  section.appendChild(STATS)
+
+
+  // divs for progress bars
+
+  let progressContainer = document.createElement("div");
+  progressContainer.setAttribute("id", "progressContainer");
+  for (i of statsArray) {
+    progressContainer.innerHTML += `<div id="${[i]}"></div>`;
+  }
   
+  section.appendChild(progressContainer)
+  
+
+
+  for (i of statsArray) {
+    let currentDIV = document.getElementById(`${i}`);
+    currentDIV.textContent = 
+    console.log(currentDIV);
+  }
+
 }
+
