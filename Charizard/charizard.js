@@ -80,7 +80,7 @@ let section = document.getElementById("section");
 init(charizard);
 
 function init(string) {
-  let charizardObj = JSON.parse(charizard);
+  let charizardObj = JSON.parse(string);
   createHeader(charizardObj);
   createSection(charizardObj);
 }
@@ -93,7 +93,7 @@ function createHeader(obj) {
 }
 
 function createSection(obj) {
-  const { abilities, stats: statistics, types, ...restOfObject } = charizard;
+  const {abilities, stats: statistics, types, ...restOfObject} = obj;
 
   let statsArray = ['Attack', 'HP', 'Defense', 'Speed', 'Special Attack', 'Special Defense', 'EXP']
 
@@ -118,22 +118,37 @@ function createSection(obj) {
 
   section.appendChild(STATS)
 
-
   // divs for progress bars
 
   let progressContainer = document.createElement("div");
   progressContainer.setAttribute("id", "progressContainer");
+
   for (i of statsArray) {
     progressContainer.innerHTML += `<div id="${[i]}"></div>`;
   }
   
   section.appendChild(progressContainer)
   
-  for (i of statsArray) {
-    let currentDIV = document.getElementById(`${i}`);
-    currentDIV.textContent = 
-    console.log(currentDIV);
+  for (i of statistics) {
+    let currentDIV = document.getElementById(`${i.stat.name}`);
+    console.log(i.base_stat);
+    currentDIV.textContent = i.base_stat;
+    currentDIV.innerHTML += `<div id="${i.stat.name}Bar"></div>`;
   }
 
+  // types
+
+  let typeContainer = document.createElement("div");
+  for (i of types) {
+    typeContainer.innerHTML += `<div id="${i.type.name}"></div>`
+    console.log(i);
+  }
+
+  section.appendChild(typeContainer);
+
+  for(i of types) {
+    let typeDIV = document.getElementById(`${i.type.name}`);
+    typeDIV.textContent = i.type.name;
+  }
 }
 
