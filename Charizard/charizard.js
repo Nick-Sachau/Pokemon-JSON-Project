@@ -80,18 +80,62 @@ let section = document.getElementById("section");
 init(charizard);
 
 function init(string) {
-  let charizardObj = JSON.parse(charizard);
+  let charizardObj = JSON.parse(string);
   createHeader(charizardObj);
   createSection(charizardObj);
 }
 
 function createHeader(obj) {
   const H1 = document.createElement("h1");
-  H1.textContent = obj['name' ]
+  H1.textContent = "Pokedex";
 
-
+  header.appendChild(H1);
 }
 
 function createSection(obj) {
+  const {abilities, stats: statistics, types, ...restOfObject} = obj;
+
+  let statsArray = ['Attack', 'HP', 'Defense', 'Speed', 'Special Attack', 'Special Defense', 'EXP']
+
+  let UL = document.createElement("ul");
+  let STATS = document.createElement("div");
+
+  STATS.setAttribute("id", "stats");
+
+  let statNames = document.createElement("div");
+  statNames.setAttribute("id", "statNames");
+
+  for (i in statsArray) {
+    let li = document.createElement("li");
+    li.textContent = statsArray[i];
+    let br = document.createElement("br");
+    UL.appendChild(br);
+    UL.appendChild(li);
+  }
+
+  statNames.appendChild(UL);
+  STATS.appendChild(statNames);
+
+  section.appendChild(STATS)
+
+
+  // divs for progress bars
+
+  let progressContainer = document.createElement("div");
+  progressContainer.setAttribute("id", "progressContainer");
+  for (i of statsArray) {
+    progressContainer.innerHTML += `<div id="${[i]}"></div>`;
+  }
+  
+  section.appendChild(progressContainer)
+  
+
+
+  for (i of statistics) {
+    let currentDIV = document.getElementById(`${i.stat.name}`);
+    console.log(i.base_stat)
+    currentDIV.textContent = i.base_stat
+  }
 
 }
+
