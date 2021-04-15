@@ -129,8 +129,6 @@ function createSection(obj) {
   
   section.appendChild(progressContainer)
   
-
-
   for (i of statsArray) {
     let currentDIV = document.getElementById(`${i}`);
     currentDIV.textContent = 
