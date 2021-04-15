@@ -1,7 +1,7 @@
 html {
   font-family: 'RocknRoll One', sans-serif;
   background-color: black;
-  
+  text-transform: capitalize;
 }
 
 header{
@@ -37,10 +37,13 @@ h2{
 
 article#name h2{
   font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 article#name{
   width: 50%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -52,12 +55,14 @@ section{
   grid-template-areas:
   "stats stats abilities abilities"
   "stats stats type type"
-  "basexp wt height id"
-  "def def def def";
+  "stats stats def def"
+  "basexp wt height id";
+  
 }
 main{
   grid-area: main;
-  height: 500px;
+  
+  
 }
 
 article#stats{
@@ -68,6 +73,10 @@ article#stats{
 
 article#stats div{
   height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 article#abilities{
@@ -114,8 +123,8 @@ div {
 }
 
 p{
-  margin-top:.8rem;
-  margin-bottom: .8rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=charmeleon.css.map */
 /* No CSS *//*# sourceMappingURL=charmeleon.css.map */
