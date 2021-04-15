@@ -70,15 +70,30 @@ let charmeleon = `{
   let charObj = JSON.parse(charmeleon)
 let header = document.getElementById("header")
 let section = document.getElementById("section")
+let main = document.getElementById("main")
 
 init(charmeleon)
 
 function init(charmeleon){
     let charObj = JSON.parse(charmeleon)
-    // createHeader(charObj)
+    createMain(charObj)
     createSection(charObj)
 }
 
+function createMain(obj){
+  ARTICLE_name = document.createElement('article')
+  ARTICLE_name.setAttribute('id', 'name')
+  H2_name = document.createElement('h2')
+  DIV_name = document.createElement('div')
+  H2_name.textContent = charObj['name']
+  img_char = document.createElement('img')
+  img_char.setAttribute('src', 'charmeleon.jpg')
+  img_char.setAttribute('width', '90%')
+  DIV_name.appendChild(img_char)
+  ARTICLE_name.appendChild(H2_name)
+  ARTICLE_name.appendChild(DIV_name)
+  main.appendChild(ARTICLE_name)
+}
 function createSection(obj){
     
 // ABILITIES
@@ -119,9 +134,97 @@ function createSection(obj){
     ARTICLE_height.appendChild(DIV_height)
 // HEIGHT
 
-    
+// ID
+    ARTICLE_id = document.createElement('article')
+    ARTICLE_id.setAttribute('id', 'id')
+    H2_id = document.createElement('h2')
+    DIV_id = document.createElement('div')
+    H2_id.textContent = 'ID'
+    DIV_id.textContent = charObj['id']
+    ARTICLE_id.appendChild(H2_id)
+    ARTICLE_id.appendChild(DIV_id)
+// ID
+
+// DEFAULT
+    ARTICLE_def = document.createElement("article")
+    ARTICLE_def.setAttribute('id', 'default')
+    H2_def = document.createElement('h2')
+    DIV_def = document.createElement('div')
+    H2_def.textContent = 'Default?'
+    DIV_def.textContent = charObj['is_default']
+    ARTICLE_def.appendChild(H2_def)
+    ARTICLE_def.appendChild(DIV_def)
+// DEFAULT
+
+// STATS
+  ARTICLE_stats = document.createElement('article')
+  ARTICLE_stats.setAttribute('id', 'stats')
+  H2_stats = document.createElement('h2')
+  DIV_stats = document.createElement('div')
+  H2_stats.textContent = 'Base Stats'
+  
+  P1_stats = document.createElement('p')
+  P1_stats.textContent = `${charObj['stats'][0]['stat']['name']}: ${charObj['stats'][0]['base_stat']}`
+  DIV_stats.appendChild(P1_stats)
+  
+  P2_stats = document.createElement('p')
+  P2_stats.textContent = `${charObj['stats'][1]['stat']['name']}: ${charObj['stats'][1]['base_stat']}`
+  DIV_stats.appendChild(P2_stats)
+
+  P3_stats = document.createElement('p')
+  P3_stats.textContent = `${charObj['stats'][2]['stat']['name']}: ${charObj['stats'][2]['base_stat']}`
+  DIV_stats.appendChild(P3_stats)
+
+  P4_stats = document.createElement('p')
+  P4_stats.textContent = `${charObj['stats'][3]['stat']['name']}: ${charObj['stats'][3]['base_stat']}`
+  DIV_stats.appendChild(P4_stats)
+
+  P5_stats = document.createElement('p')
+  P5_stats.textContent = `${charObj['stats'][4]['stat']['name']}: ${charObj['stats'][4]['base_stat']}`
+  DIV_stats.appendChild(P5_stats)
+
+  P6_stats = document.createElement('p')
+  P6_stats.textContent = `${charObj['stats'][5]['stat']['name']}: ${charObj['stats'][5]['base_stat']}`
+  DIV_stats.appendChild(P6_stats)
+  ARTICLE_stats.appendChild(H2_stats)
+  ARTICLE_stats.appendChild(DIV_stats)
+// STATS    
+
+// TYPE
+    ARTICLE_type = document.createElement('article')
+    ARTICLE_type.setAttribute('id', 'type')
+    H2_type = document.createElement('h2')
+    DIV_type = document.createElement('div')
+    DIV_type.textContent = `Slot ${charObj['types'][0]['slot']} : ${charObj['types'][0]['type']['name']}`
+    H2_type.textContent = 'Type'
+    ARTICLE_type.appendChild(H2_type)
+    ARTICLE_type.appendChild(DIV_type)
+// TYPE
+
+// WEIGHT
+    ARTICLE_weight = document.createElement('article')
+    ARTICLE_weight.setAttribute('id', 'weight')
+    H2_weight = document.createElement('h2')
+    DIV_weight = document.createElement('div')
+    H2_weight.textContent = 'Weight'
+    DIV_weight.textContent = `${charObj['weight']}`
+    ARTICLE_weight.appendChild(H2_weight)
+    ARTICLE_weight.appendChild(DIV_weight)
+// WEIGHT
+    section.appendChild(ARTICLE_stats)
     section.appendChild(ARTICLE_abilities)
+    section.appendChild(ARTICLE_type)
     section.appendChild(ARTICLE_basexp)
+    section.appendChild(ARTICLE_weight)
     section.appendChild(ARTICLE_height)
+    section.appendChild(ARTICLE_id)
+    section.appendChild(ARTICLE_def)
+    
+    
+    
 
 }
+
+let {name: n, stats: newStats, abilities: abils, id: id, ...others} = charObj
+
+console.log(name)
