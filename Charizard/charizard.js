@@ -134,6 +134,7 @@ function createSection(obj) {
   for (i of statistics) {
     let currentDIV = document.getElementById(`${i.stat.name}`);
     console.log(i.base_stat)
+    console.log(i)
     currentDIV.textContent = i.base_stat
   }
 
