@@ -118,25 +118,37 @@ function createSection(obj) {
 
   section.appendChild(STATS)
 
-
   // divs for progress bars
 
   let progressContainer = document.createElement("div");
   progressContainer.setAttribute("id", "progressContainer");
+
   for (i of statsArray) {
     progressContainer.innerHTML += `<div id="${[i]}"></div>`;
   }
   
   section.appendChild(progressContainer)
   
-
-
   for (i of statistics) {
     let currentDIV = document.getElementById(`${i.stat.name}`);
-    console.log(i.base_stat)
-    console.log(i)
-    currentDIV.textContent = i.base_stat
+    console.log(i.base_stat);
+    currentDIV.textContent = i.base_stat;
+    currentDIV.innerHTML += `<div id="${i.stat.name}Bar"></div>`;
   }
 
+  // types
+
+  let typeContainer = document.createElement("div");
+  for (i of types) {
+    typeContainer.innerHTML += `<div id="${i.type.name}"></div>`
+    console.log(i);
+  }
+
+  section.appendChild(typeContainer);
+
+  for(i of types) {
+    let typeDIV = document.getElementById(`${i.type.name}`);
+    typeDIV.textContent = i.type.name;
+  }
 }
 
