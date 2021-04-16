@@ -1,121 +1,13 @@
 html {
   font-family: 'RocknRoll One', sans-serif;
-  background-color: black;
-  
-}
-
-header{
-  color: white;
-  font-size: 2rem;
-  letter-spacing: 5px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-div#wrapper{
-  background-color: rgb(32, 32, 32);
-  border: 2px white solid;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: 
-  "main section";
 }
 
 article {
   background-color: orange;
-  text-align: center;
   border-radius: 10px;
-  height: auto;
-}
-h2{
-  font-size: 0.8rem;
-}
-
-article#name h2{
-  font-size: 2rem;
-}
-article#name{
-  width: 50%;
-  margin: auto;
-}
-
-
-section{
-  grid-area: section;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  
-  grid-template-areas:
-  "stats stats abilities abilities"
-  "stats stats type type"
-  "basexp wt height id"
-  "def def def def";
-}
-main{
-  grid-area: main;
-  height: 500px;
-}
-
-article#stats{
-  grid-area: stats;
-  margin: 5px;
-  height: 260px;
-}
-
-article#stats div{
-  height: inherit;
-}
-
-article#abilities{
-  grid-area: abilities;
-  margin: 5px;
-}
-
-article#type{
-  grid-area: type;
-  margin: 5px;
-}
-
-article#basexp{
-  grid-area: basexp;
-  margin: 5px;
-}
-
-article#weight{
-  grid-area: wt;
-  margin: 5px;
-}
-
-article#height{
-  grid-area: height;
-  margin: 5px;
-}
-
-article#id{
-  grid-area: id;
-  margin: 5px;
-}
-
-article#default{
-  grid-area: def;
-  margin: 5px;
 }
 
 div {
   background-color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  list-style-type: none;
-  
-}
-
-p{
-  margin-top:.8rem;
-  margin-bottom: .8rem;
 }
 /*# sourceMappingURL=charmeleon.css.map */
-/* No CSS *//*# sourceMappingURL=charmeleon.css.map */
