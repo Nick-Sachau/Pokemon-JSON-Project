@@ -1,4 +1,4 @@
-let charmeleon = `{
+let charizard = `{
     "abilities": [
       {
         "name": "blaze"
@@ -67,12 +67,12 @@ let charmeleon = `{
     ],
     "weight": 190
   }`
-  let charObj = JSON.parse(charmeleon)
+  let charObj = JSON.parse(charizard)
 let header = document.getElementById("header")
 let section = document.getElementById("section")
 let main = document.getElementById("main")
 
-init(charmeleon)
+init(charizard)
 
 function init(charmeleon){
     let charObj = JSON.parse(charmeleon)

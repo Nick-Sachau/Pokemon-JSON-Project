@@ -1,154 +1,139 @@
-let charizard = `{
-  "abilities": [
-    {
-      "name": "Blaze"
-    },
-    {
-      "name": "Solar Power"
-    }
-  ],
-  "base_experience": 240,
-  "height": 17,
-  "id": 6,
-  "is_default": true,
-  "name": "Charizard",
-  "order": 7,
-  "stats": [
-    {
-      "base_stat": 78,
-      "effort": 0,
-      "stat": {
-        "name": "HP"
-      }
-    },
-    {
-      "base_stat": 84,
-      "effort": 0,
-      "stat": {
-        "name": "Attack"
-      }
-    },
-    {
-      "base_stat": 78,
-      "effort": 0,
-      "stat": {
-        "name": "Defense"
-      }
-    },
-    {
-      "base_stat": 109,
-      "effort": 3,
-      "stat": {
-        "name": "Special Attack"
-      }
-    },
-    {
-      "base_stat": 85,
-      "effort": 0,
-      "stat": {
-        "name": "Special Defense"
-      }
-    },
-    {
-      "base_stat": 100,
-      "effort": 0,
-      "stat": {
-        "name": "Speed"
-      }
-    }
-  ],
-  "types": [
-    {
-      "slot": 1,
-      "type": {
-        "name": "Fire"
-      }
-    },
-    {
-      "slot": 2,
-      "type": {
-        "name": "Flying"
-      }
-    }
-  ],
-  "weight": 905
-}`
+fetch('../Assets/charizard.json')
+  .then(response => response.json())
+  .then(data => init(data))
+  .catch(err => console.log(err));
 
-let header = document.getElementById("header");
-let section = document.getElementById("section");
-
-init(charizard);
-
-function init(string) {
-  let charizardObj = JSON.parse(string);
-  createHeader(charizardObj);
-  createSection(charizardObj);
+function init(obj) {
+  createHeader(obj);
+  createSection(obj);
 }
 
 function createHeader(obj) {
-  const H1 = document.createElement("h1");
-  H1.textContent = "Pokedex";
+  const H1 = document.createElement('h1');
 
-  header.appendChild(H1);
+  H1.textContent = 'Pokédex'
+
+  header.appendChild(H1)
 }
 
 function createSection(obj) {
-  const {abilities, stats: statistics, types, ...restOfObject} = obj;
 
-  let statsArray = ['Attack', 'HP', 'Defense', 'Speed', 'Special Attack', 'Special Defense', 'EXP']
+  const {stats: statistics, ...restOfObject} = obj;
 
-  let UL = document.createElement("ul");
-  let STATS = document.createElement("div");
+  let types = obj.types
 
-  STATS.setAttribute("id", "stats");
+  const PICTURE = document.createElement('div');
+  const NUMBERID = document.createElement('p');
+  const IMG = document.createElement('img');
+  const TYPE = document.createElement('div');
+  const H_W  = document.createElement('div');
+  const HEIGHT = document.createElement('div');
+  const WEIGHT = document.createElement('div');
+  const STATS = document.createElement('div');
+  const NAME = document.createElement('h2');
+  const H3STATS = document.createElement('h3');
+  const STATNAMES = document.createElement('div');
+  const UL = document.createElement('ul');
+  const PROGRESSCONTAINER = document.createElement('div')
 
-  let statNames = document.createElement("div");
-  statNames.setAttribute("id", "statNames");
+  NUMBERID.setAttribute('id', 'numberID');
+  PICTURE.setAttribute('id', 'picture');
+  IMG.setAttribute('id', 'img');
+  IMG.setAttribute('src', '../charizard.png');
+  IMG.setAttribute('width', '100%');
+  TYPE.setAttribute('id', 'type');
+  H_W.setAttribute('id', 'h_W');
+  HEIGHT.setAttribute('id', 'height');
+  WEIGHT.setAttribute('id', 'weight');
+  STATS.setAttribute('id', 'stats');
+  NAME.setAttribute('id', 'name');
+  H3STATS.setAttribute('id', 'h3Stats');
+  STATNAMES.setAttribute('id', 'statNames');
+  PROGRESSCONTAINER.setAttribute('id', 'progressContainer');
 
-  for (i in statsArray) {
-    let li = document.createElement("li");
+  NUMBERID.textContent = '#' + obj.id;
+  HEIGHT.textContent = 'Height: ' + obj.height;
+  WEIGHT.textContent = 'Weight: ' + obj.weight;
+  NAME.textContent = obj.name
+  H3STATS.textContent = 'Base Stats'
+
+  // goes through all the types and adds it to the div #types
+
+  for(type in types) {
+    let tempType = types[type].type;
+
+    const TYPE2 = document.createElement('div');
+
+    TYPE2.setAttribute('id', tempType.name);
+
+    TYPE2.textContent =  tempType.name
+
+    TYPE.appendChild(TYPE2)
+  }
+
+  // loop that creates all the li's and br's for the ul
+
+  let statsArray = ['Attack', 'HP', 'Defense', 'Speed', 'SpecialAttack', 'SpecialDefense', 'EXP'];
+
+  for(i in statsArray) {
+    let li = document.createElement('li');
     li.textContent = statsArray[i];
-    let br = document.createElement("br");
-    UL.appendChild(br);
+
+    let br = document.createElement('br');
     UL.appendChild(li);
+    UL.appendChild(br);
   }
 
-  statNames.appendChild(UL);
-  STATS.appendChild(statNames);
-
-  section.appendChild(STATS)
-
-  // divs for progress bars
-
-  let progressContainer = document.createElement("div");
-  progressContainer.setAttribute("id", "progressContainer");
-
-  for (i of statsArray) {
-    progressContainer.innerHTML += `<div id="${[i]}"></div>`;
+  // loop that creates all of the progress bars
+  
+  for(i in statsArray) {
+    let myProgress = document.createElement('div');
+    myProgress.setAttribute('id', statsArray[i]);
+    myProgress.setAttribute('class', 'myProgress');
+    PROGRESSCONTAINER.appendChild(myProgress);
   }
   
-  section.appendChild(progressContainer)
+
+  PICTURE.appendChild(NUMBERID);
+  PICTURE.appendChild(IMG);
+  PICTURE.appendChild(TYPE);
+  PICTURE.appendChild(H_W);
+  H_W.appendChild(HEIGHT);
+  H_W.appendChild(WEIGHT);
+  STATS.appendChild(NAME);
+  STATS.appendChild(H3STATS);
+  STATS.appendChild(STATNAMES);
+  STATNAMES.appendChild(UL);
+  STATNAMES.appendChild(PROGRESSCONTAINER)
+  section.appendChild(PICTURE);
+  section.appendChild(STATS);
+
+  for(let i = 0; i < 6; i++) {
   
-  for (i of statistics) {
-    let currentDIV = document.getElementById(`${i.stat.name}`);
-    console.log(i.base_stat);
-    currentDIV.textContent = i.base_stat;
-    currentDIV.innerHTML += `<div id="${i.stat.name}Bar"></div>`;
+    let tempstat = statistics[i].stat;
+
+    console.log(statistics[i])  
+
+    console.log(tempstat.name)
+    
+    let myBar = document.createElement('div');
+    //div
+    myBar.setAttribute('id', tempstat.name);
+    //div id= "temp"
+    myBar.textContent = statistics[i].base_stat + '/100'
+    //get div with id 'temp'
+    let currentDIV = document.getElementById(`${tempstat.name}`);
+    console.log(myBar)
+    console.log(currentDIV)
+    
+    currentDIV.appendChild(myBar)
   }
 
-  // types
 
-  let typeContainer = document.createElement("div");
-  for (i of types) {
-    typeContainer.innerHTML += `<div id="${i.type.name}"></div>`
-    console.log(i);
-  }
+  let myBAR = document.createElement('div');
+  myBAR.setAttribute('id', 'EXP')
+  myBAR.textContent = obj.base_experience + '/100'
+  let EXP = document.getElementById('EXP')
 
-  section.appendChild(typeContainer);
-
-  for(i of types) {
-    let typeDIV = document.getElementById(`${i.type.name}`);
-    typeDIV.textContent = i.type.name;
-  }
+  EXP.appendChild(myBAR)
 }
-
