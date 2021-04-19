@@ -1,0 +1,163 @@
+html {
+    font-family: sans-serif;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    overflow: hidden;
+
+}
+
+main {
+    min-height: 100vh;
+    #section {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        #picture {
+            width: 35%;
+            padding: 2%;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            #h_W {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            #numberID {
+                top: 0;
+                width: 100%;
+                height: 5%;
+                margin: 0;
+                font-size: 1.7rem;
+            }
+
+            img {
+                width: 80%;
+            }
+
+            #type {
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                z-index: 100;
+                top: -20%;
+
+                #Fire {
+                    background-color: rgb(190, 26, 26);
+                    width: 20%;
+                    border-radius: 40px;
+                    text-align: center;
+                }
+
+                #Flying {
+                    background-color: rgb(92, 86, 86);
+                    width: 20%;
+                    border-radius: 40px;
+                    text-align: center;
+                }
+            }
+        }
+
+        #stats {
+            width: 65%;
+            border: 1px solid white;
+            text-align: center;
+
+            #statNames {
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+            }
+
+            ul {
+                width: 45%;
+                text-align: left;
+                list-style-type: none;
+                margin-right: 0;
+
+                h3 {
+                    text-align: center;
+                }
+            }
+
+            #progressContainer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-right: 5%;
+
+                .myProgress {
+                    margin: 9px 0;
+                    width: 100%;
+                    border-radius: 10px;
+                    height: 20px;
+                    background-color: white;
+
+                    #Attack {
+                        width: 84%;
+                        border-radius: 10px;
+                        height: 20px;
+                        background-color: orange;
+                    }
+
+                    #HP {
+                        width: 78%;
+                        border-radius: 10px;
+                        height: 20px;
+                        background-color: red;
+                    }
+
+                    #Defense {
+                        width: 78%;
+                        border-radius: 10px;
+                        height: 20px;
+                        background-color: rgb(13, 175, 230);
+                    }
+
+                    #Speed {
+                        width: 100%;
+                        border-radius: 10px;
+                        height: 20px;
+                        background-color: rgb(148, 148, 148);
+                    }
+
+                    #SpecialAttack {
+                        width: 100%;
+                        border-radius: 10px;
+                        height: 20px;
+                        background-color: rgb(255, 217, 1);
+                    }
+
+                    #SpecialDefense {
+                        width: 85%;
+                        border-radius: 10px;
+                        height: 20px;
+                        background-color: rgb(10, 143, 187);
+                    }
+
+                    #EXP {
+                        width: 100%;
+                        border-radius: 10px;
+                        height: 20px;
+                        background-color: green;
+                    }
+                }
+            }
+        }
+    }
+
+    #header {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,59 +1,59 @@
 {
   "abilities": [
     {
-      "name": "blaze"
+      "name": "Blaze"
     },
     {
-      "name": "solar-power"
+      "name": "Solar Power"
     }
   ],
   "base_experience": 240,
   "height": 17,
   "id": 6,
   "is_default": true,
-  "name": "charizard",
+  "name": "Charizard",
   "order": 7,
   "stats": [
     {
       "base_stat": 78,
       "effort": 0,
       "stat": {
-        "name": "hp"
+        "name": "HP"
       }
     },
     {
       "base_stat": 84,
       "effort": 0,
       "stat": {
-        "name": "attack"
+        "name": "Attack"
       }
     },
     {
       "base_stat": 78,
       "effort": 0,
       "stat": {
-        "name": "defense"
+        "name": "Defense"
       }
     },
     {
       "base_stat": 109,
       "effort": 3,
       "stat": {
-        "name": "special-attack"
+        "name": "SpecialAttack"
       }
     },
     {
       "base_stat": 85,
       "effort": 0,
       "stat": {
-        "name": "special-defense"
+        "name": "SpecialDefense"
       }
     },
     {
       "base_stat": 100,
       "effort": 0,
       "stat": {
-        "name": "speed"
+        "name": "Speed"
       }
     }
   ],
@@ -61,13 +61,13 @@
     {
       "slot": 1,
       "type": {
-        "name": "fire"
+        "name": "Fire"
       }
     },
     {
       "slot": 2,
       "type": {
-        "name": "flying"
+        "name": "Flying"
       }
     }
   ],

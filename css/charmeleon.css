@@ -1,130 +1,162 @@
 html {
-  font-family: 'RocknRoll One', sans-serif;
-  background-color: black;
-  text-transform: capitalize;
-}
-
-header{
+  background-color: #1a1a1a;
   color: white;
-  font-size: 2rem;
-  letter-spacing: 5px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
 }
 
-div#wrapper{
-  background-color: rgb(32, 32, 32);
-  border: 2px white solid;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: 
-  "main section";
+main {
+  min-height: 100vh;
 }
 
-article {
-  background-color: orange;
-  text-align: center;
-  border-radius: 10px;
-  height: auto;
-}
-h2{
-  font-size: 0.8rem;
-}
-
-article#name h2{
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-article#name{
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-section{
-  grid-area: section;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  
-  grid-template-areas:
-  "stats stats abilities abilities"
-  "stats stats type type"
-  "stats stats def def"
-  "basexp wt height id";
-  
-}
-main{
-  grid-area: main;
-  
-  
-}
-
-article#stats{
-  grid-area: stats;
-  margin: 5px;
-  height: 260px;
-}
-
-article#stats div{
-  height: inherit;
+main #section {
+  width: 85%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+main #section #picture {
+  width: 35%;
+  padding: 2%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+main #section #picture #h_W {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   justify-content: space-around;
 }
 
-article#abilities{
-  grid-area: abilities;
-  margin: 5px;
+main #section #picture #numberID {
+  top: 0;
+  width: 100%;
+  height: 5%;
+  margin: 0;
+  font-size: 1.7rem;
 }
 
-article#type{
-  grid-area: type;
-  margin: 5px;
+main #section #picture img {
+  width: 55%;
 }
 
-article#basexp{
-  grid-area: basexp;
-  margin: 5px;
+main #section #picture #type {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 100;
+  top: -20%;
 }
 
-article#weight{
-  grid-area: wt;
-  margin: 5px;
+main #section #picture #type #Fire {
+  background-color: #be1a1a;
+  width: 20%;
+  border-radius: 40px;
+  text-align: center;
 }
 
-article#height{
-  grid-area: height;
-  margin: 5px;
+main #section #picture #type #Flying {
+  background-color: #5c5656;
+  width: 20%;
+  border-radius: 40px;
+  text-align: center;
 }
 
-article#id{
-  grid-area: id;
-  margin: 5px;
+main #section #stats {
+  width: 65%;
+  border: 1px solid white;
+  text-align: center;
 }
 
-article#default{
-  grid-area: def;
-  margin: 5px;
+main #section #stats #statNames {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
-div {
-  background-color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+main #section #stats ul {
+  width: 45%;
+  text-align: left;
   list-style-type: none;
-  
+  margin-right: 0;
 }
 
-p{
-  margin-top: 0;
-  margin-bottom: 0;
+main #section #stats ul h3 {
+  text-align: center;
+}
+
+main #section #stats #progressContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+main #section #stats #progressContainer .myProgress {
+  margin: 11px 0;
+  width: 100%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: white;
+}
+
+main #section #stats #progressContainer .myProgress #Attack {
+  width: 64%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: orange;
+}
+
+main #section #stats #progressContainer .myProgress #HP {
+  width: 58%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: red;
+}
+
+main #section #stats #progressContainer .myProgress #Defense {
+  width: 58%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: #0dafe6;
+}
+
+main #section #stats #progressContainer .myProgress #Speed {
+  width: 80%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: #949494;
+}
+
+main #section #stats #progressContainer .myProgress #SpecialAttack {
+  width: 80%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: #ffd901;
+}
+
+main #section #stats #progressContainer .myProgress #SpecialDefense {
+  width: 65%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: #0a8fbb;
+}
+
+main #section #stats #progressContainer .myProgress #EXP {
+  width: 100%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: green;
+}
+
+main #header {
+  width: 100%;
+  text-align: center;
 }
 /*# sourceMappingURL=charmeleon.css.map */
-/* No CSS *//*# sourceMappingURL=charmeleon.css.map */
