@@ -1,9 +1,6 @@
 html {
-    font-family: sans-serif;
-    background-color: rgb(26, 26, 26);
-    color: white;
+    background-color: rgb(26, 26, 26); color: white;
     overflow: hidden;
-
 }
 
 main {
@@ -159,5 +156,35 @@ main {
     #header {
         width: 100%;
         text-align: center;
+    }
+}
+
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+    justify-content: space-between;
+
+    .left {
+        color: white;
+        text-decoration: none;
+        font-size: 5rem;
+    }
+
+    .left:visited {
+        color: white;
+    }
+
+    .right {
+        color: white;
+        text-decoration: none;
+        font-size: 5rem;
+    }
+
+    .home {
+        color: white;
+        line-height: 200%;
+        text-decoration: none;
+        font-size: 3rem;
     }
 }
