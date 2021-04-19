@@ -77,7 +77,20 @@ function createSection(obj) {
 
   for(i in statsArray) {
     let li = document.createElement('li');
-    li.textContent = statsArray[i];
+    if(statsArray[i] == 'SpecialAttack' || statsArray[i] == 'SpecialDefense') {
+      for(j in statsArray[i]) {
+        if(statsArray[i][j] == 'l') {
+          statsArray[i] = statsArray[i].split("l").join("l ");
+          
+          li.textContent = statsArray[i]
+
+          statsArray[i] = statsArray[i].split(' ').join('')
+        }
+      }
+    }else {
+      li.textContent = statsArray[i];
+    }
+    
 
     let br = document.createElement('br');
     UL.appendChild(li);
@@ -112,10 +125,6 @@ function createSection(obj) {
   
     let tempstat = statistics[i].stat;
 
-    console.log(statistics[i])
-
-    console.log(tempstat)
-
     let myBar = document.createElement('div');
 
     myBar.setAttribute('id', tempstat.name);
@@ -137,3 +146,4 @@ function createSection(obj) {
 
   EXP.appendChild(myBAR)
 }
+

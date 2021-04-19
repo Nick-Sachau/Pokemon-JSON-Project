@@ -1,6 +1,7 @@
 html {
   background-color: #1a1a1a;
   color: white;
+  overflow: hidden;
 }
 
 main {
@@ -195,4 +196,32 @@ main #section #stats #progressContainer .myProgress #EXP {
 main #header {
   width: 100%;
   text-align: center;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-top: 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .left {
+  color: white;
+  text-decoration: none;
+  font-size: 5rem;
+}
+
+footer .left:visited {
+  color: white;
+}
+
+footer .right {
+  color: white;
+  text-decoration: none;
+  font-size: 5rem;
 }
