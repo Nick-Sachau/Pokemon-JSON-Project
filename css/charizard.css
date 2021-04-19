@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   background-color: #1a1a1a;
   color: white;
+  overflow: hidden;
 }
 
 main {
@@ -100,7 +101,7 @@ main #section #stats #progressContainer {
 }
 
 main #section #stats #progressContainer .myProgress {
-  margin: 11px 0;
+  margin: 9px 0;
   width: 100%;
   border-radius: 10px;
   height: 20px;
@@ -108,49 +109,49 @@ main #section #stats #progressContainer .myProgress {
 }
 
 main #section #stats #progressContainer .myProgress #Attack {
-  width: 52%;
+  width: 84%;
   border-radius: 10px;
   height: 20px;
   background-color: orange;
 }
 
 main #section #stats #progressContainer .myProgress #HP {
-  width: 39%;
+  width: 78%;
   border-radius: 10px;
   height: 20px;
   background-color: red;
 }
 
 main #section #stats #progressContainer .myProgress #Defense {
-  width: 43%;
+  width: 78%;
   border-radius: 10px;
   height: 20px;
   background-color: #0dafe6;
 }
 
 main #section #stats #progressContainer .myProgress #Speed {
-  width: 65%;
+  width: 100%;
   border-radius: 10px;
   height: 20px;
   background-color: #949494;
 }
 
 main #section #stats #progressContainer .myProgress #SpecialAttack {
-  width: 60%;
+  width: 100%;
   border-radius: 10px;
   height: 20px;
   background-color: #ffd901;
 }
 
 main #section #stats #progressContainer .myProgress #SpecialDefense {
-  width: 50%;
+  width: 85%;
   border-radius: 10px;
   height: 20px;
   background-color: #0a8fbb;
 }
 
 main #section #stats #progressContainer .myProgress #EXP {
-  width: 62%;
+  width: 100%;
   border-radius: 10px;
   height: 20px;
   background-color: green;
