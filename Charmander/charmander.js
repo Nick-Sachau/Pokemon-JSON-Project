@@ -11,7 +11,7 @@ function init(obj) {
 function createHeader(obj) {
   const H1 = document.createElement('h1');
 
-  H1.textContent = 'Pokédex'
+  H1.textContent = 'Pokédex';
 
   header.appendChild(H1)
 }
