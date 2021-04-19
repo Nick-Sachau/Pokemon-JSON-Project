@@ -23,7 +23,7 @@ main #section {
 }
 
 main #section #picture {
-  width: 25%;
+  width: 35%;
   padding: 2%;
   border: 1px solid white;
   display: -webkit-box;
@@ -63,7 +63,7 @@ main #section #picture #numberID {
 }
 
 main #section #picture img {
-  width: 80%;
+  width: 65%;
 }
 
 main #section #picture #type {
