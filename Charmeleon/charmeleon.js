@@ -35,6 +35,8 @@ function createSection(obj) {
   const STATNAMES = document.createElement('div');
   const UL = document.createElement('ul');
   const PROGRESSCONTAINER = document.createElement('div')
+  const ABILITY1 = document.createElement('div')
+  const ABILITY2 = document.createElement('div')
 
   NUMBERID.setAttribute('id', 'numberID');
   PICTURE.setAttribute('id', 'picture');
@@ -50,12 +52,16 @@ function createSection(obj) {
   H3STATS.setAttribute('id', 'h3Stats');
   STATNAMES.setAttribute('id', 'statNames');
   PROGRESSCONTAINER.setAttribute('id', 'progressContainer');
+  ABILITY1.setAttribute('id', "ability1")
+  ABILITY2.setAttribute('id', "ability2")
 
   NUMBERID.textContent = '#' + obj.id;
   HEIGHT.textContent = 'Height: ' + obj.height;
   WEIGHT.textContent = 'Weight: ' + obj.weight;
   NAME.textContent = obj.name
   H3STATS.textContent = 'Base Stats'
+  ABILITY1.textContent = obj.abilities[0].name
+  ABILITY2.textContent = obj.abilities[1].name
 
   // goes through all the types and adds it to the div #types
 
@@ -103,6 +109,8 @@ function createSection(obj) {
   STATS.appendChild(NAME);
   STATS.appendChild(H3STATS);
   STATS.appendChild(STATNAMES);
+  STATS.appendChild(ABILITY1)
+  STATS.appendChild(ABILITY2)
   STATNAMES.appendChild(UL);
   STATNAMES.appendChild(PROGRESSCONTAINER)
   section.appendChild(PICTURE);
