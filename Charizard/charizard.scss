@@ -165,13 +165,13 @@ main {
 footer {
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 5%;
     justify-content: space-between;
+    position: relative;
 
     .left {
         color: white;
         text-decoration: none;
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .left:visited {
@@ -181,13 +181,13 @@ footer {
     .right {
         color: white;
         text-decoration: none;
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .home {
         color: white;
         line-height: 200%;
         text-decoration: none;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }
