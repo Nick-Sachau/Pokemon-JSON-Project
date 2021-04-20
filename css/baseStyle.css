@@ -3,4 +3,27 @@ html {
   background-color: #1a1a1a;
   color: white;
 }
+
+#header {
+  text-align: center;
+}
+
+section {
+  border: 1px white solid;
+  display: grid;
+  grid-template-columns: 30% 5% 30% 5% 30%;
+  grid-template-areas: "charmander empty charmeleon empty charizard";
+}
+
+div.charmander {
+  grid-area: charmander;
+}
+
+div.charmeleon {
+  grid-area: charmeleon;
+}
+
+div.charizard {
+  grid-area: charizard;
+}
 /*# sourceMappingURL=baseStyle.css.map */
