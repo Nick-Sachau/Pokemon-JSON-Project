@@ -204,16 +204,16 @@ footer {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin-top: 5%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 footer .left {
   color: white;
   text-decoration: none;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 footer .left:visited {
@@ -223,12 +223,12 @@ footer .left:visited {
 footer .right {
   color: white;
   text-decoration: none;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 footer .home {
   color: white;
   line-height: 200%;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2rem;
 }
