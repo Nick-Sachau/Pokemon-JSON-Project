@@ -98,7 +98,6 @@ function createSection(obj) {
     PROGRESSCONTAINER.appendChild(myProgress);
   }
   
-
   PICTURE.appendChild(NUMBERID);
   PICTURE.appendChild(IMG);
   PICTURE.appendChild(TYPE);
@@ -135,7 +134,6 @@ function createSection(obj) {
     
     currentDIV.appendChild(myBar)
   }
-
 
   let myBAR = document.createElement('div');
   myBAR.setAttribute('id', 'EXP')
