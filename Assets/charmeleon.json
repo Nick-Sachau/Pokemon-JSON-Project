@@ -1,59 +1,59 @@
 {
   "abilities": [
     {
-      "name": "blaze"
+      "name": "Blaze"
     },
     {
-      "name": "solar-power"
+      "name": "Solar Power"
     }
   ],
   "base_experience": 142,
   "height": 11,
   "id": 5,
   "is_default": true,
-  "name": "charmeleon",
+  "name": "Charmeleon",
   "order": 6,
   "stats": [
     {
       "base_stat": 58,
       "effort": 0,
       "stat": {
-        "name": "hp"
+        "name": "HP"
       }
     },
     {
       "base_stat": 64,
       "effort": 0,
       "stat": {
-        "name": "attack"
+        "name": "Attack"
       }
     },
     {
       "base_stat": 58,
       "effort": 0,
       "stat": {
-        "name": "defense"
+        "name": "Defense"
       }
     },
     {
       "base_stat": 80,
       "effort": 1,
       "stat": {
-        "name": "special-attack"
+        "name": "SpecialAttack"
       }
     },
     {
       "base_stat": 65,
       "effort": 0,
       "stat": {
-        "name": "special-defense"
+        "name": "SpecialDefense"
       }
     },
     {
       "base_stat": 80,
       "effort": 1,
       "stat": {
-        "name": "speed"
+        "name": "Speed"
       }
     }
   ],
@@ -61,7 +61,7 @@
     {
       "slot": 1,
       "type": {
-        "name": "fire"
+        "name": "Fire"
       }
     }
   ],
