@@ -9,21 +9,48 @@ html {
 }
 
 section {
+  margin: auto;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border: 1px white solid;
-  display: grid;
-  grid-template-columns: 30% 5% 30% 5% 30%;
-  grid-template-areas: "charmander empty charmeleon empty charizard";
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-div.charmander {
-  grid-area: charmander;
+section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 33.33%;
+  border-right: 1px white solid;
 }
 
-div.charmeleon {
-  grid-area: charmeleon;
+section div img {
+  height: 18rem;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-div.charizard {
-  grid-area: charizard;
+p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#charmeleon {
+  width: auto;
 }
 /*# sourceMappingURL=baseStyle.css.map */
